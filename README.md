@@ -2,15 +2,20 @@
 
 
 A Decorator for HttpBasicAuthentication that passes through any user with password and make it available
-to the controller (e.g. to be reused for Proxy-API's)
+to the controller (e.g. to be reused for Proxy-API's).
+
+It is based on [HttpBasicAuthentication](https://github.com/tuupola/slim-basic-auth). Any parameters, that the constructor of HttpBasicAuthentication excepts,
+can be passed to PassThroughHttpBasicAuthentication also.
  
 ## Example:
  
  
 ```
+use itinance\Middleware\PassThroughHttpBasicAuthentication
+
 $app = new \Slim\App($config);
 
-$app->add(new \ProxyAPI\middleware\PassThroughHttpBasicAuthentication([
+$app->add(new PassThroughHttpBasicAuthentication([
     "realm" => "Protected",
 ]));
 
