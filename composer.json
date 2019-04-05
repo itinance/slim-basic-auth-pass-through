@@ -1,0 +1,23 @@
+{
+    "name": "itinance/slim-basic-auth-pass-through",
+    "description": "An extension on top of slim-basic-auth, that basically passes through any auth data to the request",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "itinance\\Middleware\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "slim/slim": "^3.12",
+        "tuupola/slim-basic-auth": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hagen Hübel",
+            "email": "hhuebel@itinance.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
