@@ -10,6 +10,14 @@ use Slim\Http\Request;
 use Tuupola\Middleware\DoublePassTrait;
 use Tuupola\Middleware\HttpBasicAuthentication;
 
+/**
+ * Class PassThroughHttpBasicAuthentication
+ *
+ * Decorator for HttpBasicAuthentication that passes through any user with password and make it available
+ * to the controller (e.g. to be reused for Proxy-API's)
+ *
+ * @package itinance\Middleware
+ */
 final class PassThroughHttpBasicAuthentication implements MiddlewareInterface
 {
     use DoublePassTrait;
